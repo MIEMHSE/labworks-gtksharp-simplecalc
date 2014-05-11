@@ -6,11 +6,11 @@
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <widget-library name="../bin/Debug/simplecalc4.exe" internal="true" />
+    <widget-library name="../bin/Debug/gtksharp-labworks-simplecalc.exe" internal="true" />
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="492 405">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">Калькулятор</property>
+    <property name="Title" translatable="yes">Calc</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
@@ -35,7 +35,7 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Сложение</property>
+            <property name="Label" translatable="yes">Addition</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">10</property>
             <signal name="Clicked" handler="OnButtonOperationClicked" />
@@ -57,7 +57,7 @@
         <child>
           <widget class="Gtk.Label" id="labelOperation">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Выберите операцию</property>
+            <property name="LabelProp" translatable="yes">Choose operation</property>
           </widget>
           <packing>
             <property name="AutoSize">True</property>
@@ -79,7 +79,7 @@
             <child>
               <widget class="Gtk.Label" id="labelFirst">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Первое число</property>
+                <property name="LabelProp" translatable="yes">First number</property>
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -91,7 +91,7 @@
             <child>
               <widget class="Gtk.Label" id="labelSecond">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Второе число</property>
+                <property name="LabelProp" translatable="yes">Second number</property>
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -103,7 +103,7 @@
             <child>
               <widget class="Gtk.Label" id="labelResult">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Результат</property>
+                <property name="LabelProp" translatable="yes">Result</property>
               </widget>
               <packing>
                 <property name="Position">2</property>
@@ -204,7 +204,7 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">Сброс</property>
+                <property name="Label" translatable="yes">Reset</property>
                 <property name="UseUnderline">True</property>
                 <signal name="Clicked" handler="OnButtonRstClicked" />
               </widget>
@@ -220,7 +220,7 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">Закрыть</property>
+                <property name="Label" translatable="yes">Close</property>
                 <property name="UseUnderline">True</property>
                 <signal name="Clicked" handler="OnButtonQuitClicked" />
               </widget>
@@ -258,7 +258,7 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">Вычитание</property>
+                <property name="Label" translatable="yes">Subtraction</property>
                 <property name="UseUnderline">True</property>
                 <signal name="Clicked" handler="OnButtonOperationClicked" />
               </widget>
@@ -274,7 +274,7 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">Умножение</property>
+                <property name="Label" translatable="yes">Multiplication</property>
                 <property name="UseUnderline">True</property>
                 <signal name="Clicked" handler="OnButtonOperationClicked" />
               </widget>
@@ -290,7 +290,7 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">Деление</property>
+                <property name="Label" translatable="yes">Division</property>
                 <property name="UseUnderline">True</property>
                 <signal name="Clicked" handler="OnButtonOperationClicked" />
               </widget>

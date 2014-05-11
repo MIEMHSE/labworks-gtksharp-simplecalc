@@ -1,5 +1,6 @@
 ﻿using System;
 using Gtk;
+using Mono.Unix;
 
 public partial class MainWindow: Gtk.Window
 {	
@@ -49,8 +50,8 @@ public partial class MainWindow: Gtk.Window
 			currentOperation = OperationType.DIV;
 		}
 
-		if (entryFirst.Text.Equals ("") || entrySecond.Text.Equals ("")) {
-			ShowError ("Первый и второй аргумент должны быть заполнены!");
+		if (entryFirst.Text.Length == 0 || entrySecond.Text.Length == 0) {
+			ShowError (Catalog.GetString ("First and second argument must be filled."));
 			return;
 		}
 
@@ -60,28 +61,28 @@ public partial class MainWindow: Gtk.Window
 			opFirst = Convert.ToDouble(entryFirst.Text);
 			opSecond = Convert.ToDouble(entrySecond.Text);
 		} catch (System.FormatException) {
-			ShowError ("Первый и второй аргумент должны быть числами с плавающей запятой!");
+			ShowError (Catalog.GetString ("First and second argument must be floating-point numbers."));
 			return;
 		}
 
 		switch (currentOperation) {
 		case OperationType.ADD:
-			labelOperation.Text = "Сложение";
+			labelOperation.Text = Catalog.GetString ("Addition");
 			resultValue = opFirst + opSecond;
 			break;
 		case OperationType.SUB:
-			labelOperation.Text = "Вычитание";
+			labelOperation.Text = Catalog.GetString ("Subtraction");
 			resultValue = opFirst - opSecond;
 			break;
 		case OperationType.MUL:
-			labelOperation.Text = "Умножение";
+			labelOperation.Text = Catalog.GetString ("Multiplication");
 			resultValue = opFirst * opSecond;
 			break;
 		case OperationType.DIV:
-			labelOperation.Text = "Деление";
+			labelOperation.Text = Catalog.GetString ("Division");
 			if (opSecond == 0) {
-				ShowError ("Делить на ноль нельзя!");
-				entryResult.Text = "";
+				ShowError (Catalog.GetString ("You can not divide by zero!"));
+				entryResult.Text = String.Empty;
 				return;
 			}
 			resultValue = opFirst / opSecond;
@@ -96,9 +97,9 @@ public partial class MainWindow: Gtk.Window
 
 	protected void OnButtonRstClicked (object sender, System.EventArgs e)
 	{
-		labelOperation.Text = "Выберите операцию";
-		entryFirst.Text = "";
-		entrySecond.Text = "";
-		entryResult.Text = "";
+		labelOperation.Text = Catalog.GetString ("Choose operation");
+		entryFirst.Text = String.Empty;
+		entrySecond.Text = String.Empty;
+		entryResult.Text = String.Empty;
 	}
 }

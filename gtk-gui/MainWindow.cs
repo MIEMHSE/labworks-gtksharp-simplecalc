@@ -27,7 +27,7 @@ public partial class MainWindow
 		global::Stetic.Gui.Initialize (this);
 		// Widget MainWindow
 		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString ("Калькулятор");
+		this.Title = global::Mono.Unix.Catalog.GetString ("Calc");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.table1 = new global::Gtk.Table (((uint)(3)), ((uint)(3)), true);
@@ -40,7 +40,7 @@ public partial class MainWindow
 		this.buttonAdd.Name = "buttonAdd";
 		this.buttonAdd.UseUnderline = true;
 		this.buttonAdd.BorderWidth = ((uint)(10));
-		this.buttonAdd.Label = global::Mono.Unix.Catalog.GetString ("Сложение");
+		this.buttonAdd.Label = global::Mono.Unix.Catalog.GetString ("Addition");
 		this.table1.Add (this.buttonAdd);
 		global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table1 [this.buttonAdd]));
 		w1.LeftAttach = ((uint)(2));
@@ -50,7 +50,7 @@ public partial class MainWindow
 		// Container child table1.Gtk.Table+TableChild
 		this.labelOperation = new global::Gtk.Label ();
 		this.labelOperation.Name = "labelOperation";
-		this.labelOperation.LabelProp = global::Mono.Unix.Catalog.GetString ("Выберите операцию");
+		this.labelOperation.LabelProp = global::Mono.Unix.Catalog.GetString ("Choose operation");
 		this.table1.Add (this.labelOperation);
 		global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table1 [this.labelOperation]));
 		w2.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -63,7 +63,7 @@ public partial class MainWindow
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.labelFirst = new global::Gtk.Label ();
 		this.labelFirst.Name = "labelFirst";
-		this.labelFirst.LabelProp = global::Mono.Unix.Catalog.GetString ("Первое число");
+		this.labelFirst.LabelProp = global::Mono.Unix.Catalog.GetString ("First number");
 		this.vbox1.Add (this.labelFirst);
 		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.labelFirst]));
 		w3.Position = 0;
@@ -72,7 +72,7 @@ public partial class MainWindow
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.labelSecond = new global::Gtk.Label ();
 		this.labelSecond.Name = "labelSecond";
-		this.labelSecond.LabelProp = global::Mono.Unix.Catalog.GetString ("Второе число");
+		this.labelSecond.LabelProp = global::Mono.Unix.Catalog.GetString ("Second number");
 		this.vbox1.Add (this.labelSecond);
 		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.labelSecond]));
 		w4.Position = 1;
@@ -81,7 +81,7 @@ public partial class MainWindow
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.labelResult = new global::Gtk.Label ();
 		this.labelResult.Name = "labelResult";
-		this.labelResult.LabelProp = global::Mono.Unix.Catalog.GetString ("Результат");
+		this.labelResult.LabelProp = global::Mono.Unix.Catalog.GetString ("Result");
 		this.vbox1.Add (this.labelResult);
 		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.labelResult]));
 		w5.Position = 2;
@@ -152,7 +152,7 @@ public partial class MainWindow
 		this.buttonRst.CanFocus = true;
 		this.buttonRst.Name = "buttonRst";
 		this.buttonRst.UseUnderline = true;
-		this.buttonRst.Label = global::Mono.Unix.Catalog.GetString ("Сброс");
+		this.buttonRst.Label = global::Mono.Unix.Catalog.GetString ("Reset");
 		this.vbox3.Add (this.buttonRst);
 		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.buttonRst]));
 		w11.Position = 0;
@@ -163,7 +163,7 @@ public partial class MainWindow
 		this.buttonQuit.CanFocus = true;
 		this.buttonQuit.Name = "buttonQuit";
 		this.buttonQuit.UseUnderline = true;
-		this.buttonQuit.Label = global::Mono.Unix.Catalog.GetString ("Закрыть");
+		this.buttonQuit.Label = global::Mono.Unix.Catalog.GetString ("Close");
 		this.vbox3.Add (this.buttonQuit);
 		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.buttonQuit]));
 		w12.Position = 1;
@@ -187,7 +187,7 @@ public partial class MainWindow
 		this.buttonSub.CanFocus = true;
 		this.buttonSub.Name = "buttonSub";
 		this.buttonSub.UseUnderline = true;
-		this.buttonSub.Label = global::Mono.Unix.Catalog.GetString ("Вычитание");
+		this.buttonSub.Label = global::Mono.Unix.Catalog.GetString ("Subtraction");
 		this.vbox5.Add (this.buttonSub);
 		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.buttonSub]));
 		w14.Position = 0;
@@ -198,7 +198,7 @@ public partial class MainWindow
 		this.buttonMul.CanFocus = true;
 		this.buttonMul.Name = "buttonMul";
 		this.buttonMul.UseUnderline = true;
-		this.buttonMul.Label = global::Mono.Unix.Catalog.GetString ("Умножение");
+		this.buttonMul.Label = global::Mono.Unix.Catalog.GetString ("Multiplication");
 		this.vbox5.Add (this.buttonMul);
 		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.buttonMul]));
 		w15.Position = 1;
@@ -209,7 +209,7 @@ public partial class MainWindow
 		this.buttonDiv.CanFocus = true;
 		this.buttonDiv.Name = "buttonDiv";
 		this.buttonDiv.UseUnderline = true;
-		this.buttonDiv.Label = global::Mono.Unix.Catalog.GetString ("Деление");
+		this.buttonDiv.Label = global::Mono.Unix.Catalog.GetString ("Division");
 		this.vbox5.Add (this.buttonDiv);
 		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox5 [this.buttonDiv]));
 		w16.Position = 2;
